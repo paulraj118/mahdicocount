@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="DDItzVCp6jyIHug_wLkP2_c4qM5Api79YNsgyd7yRc8" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mahdi Coconuts & Agro Products</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Cinzel:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --cream:#F5EFE0;--sandal:#E8D5B0;--sandal2:#D4B896;--white:#FDFAF4;
+  --gold:#B8860B;--gold2:#D4A017;--gold3:#F0C040;
+  --brown:#4A2C0A;--dark:#2A1F0E;--green:#2D5A27;--green2:#4A7C3F;
+  --muted:#7A6A50;--border:rgba(184,134,11,0.3);--card:rgba(255,250,240,0.95);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--dark);font-family:"Lato",sans-serif;font-weight:300;line-height:1.75;overflow-x:hidden}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:0 4%;height:66px;background:rgba(245,239,224,0.97);border-bottom:2px solid var(--border);backdrop-filter:blur(12px)}
+.nav-logo-wrap{display:flex;align-items:center;gap:11px;text-decoration:none}
+.nav-logo-img{width:42px;height:42px;border-radius:8px;object-fit:cover;border:2px solid var(--gold)}
+.nav-logo-text{font-family:"Cinzel",serif;font-size:0.85rem;font-weight:700;color:var(--brown);letter-spacing:0.05em;line-height:1.25}
+.nav-logo-text span{display:block;font-size:0.6rem;font-weight:400;color:var(--muted);letter-spacing:0.1em;font-family:"Lato",sans-serif;text-transform:uppercase}
+.nav-links{display:flex;gap:6px;list-style:none}
+.nav-links a{color:var(--brown);text-decoration:none;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-family:"Lato",sans-serif;padding:7px 18px;border-radius:30px;border:1.5px solid transparent;transition:all 0.3s}
+.nav-links a:hover,.nav-links a.active{background:var(--gold);color:var(--white);border-color:var(--gold)}
+
+/* === CURVED SECTION TOPS === */
+.curve-top{position:absolute;top:-1px;left:0;right:0;overflow:hidden;line-height:0;z-index:2}
+.curve-top svg{display:block;width:100%;height:60px}
+.curve-bottom{position:absolute;bottom:-1px;left:0;right:0;overflow:hidden;line-height:0;z-index:2;transform:rotate(180deg)}
+.curve-bottom svg{display:block;width:100%;height:60px}
+
+/* === HERO === */
+#home{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 5% 80px;position:relative;overflow:hidden;background:linear-gradient(160deg,#FDFAF4 0%,#F5EFE0 40%,#EDD9A3 75%,#E8D5B0 100%)}
+.hero-trees-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.htree{position:absolute;font-size:clamp(7rem,16vw,14rem);opacity:0.055;line-height:1;filter:sepia(0.9) brightness(0.7)}
+.htree-1{left:-3%;bottom:0;transform:rotate(-10deg)}
+.htree-2{right:-3%;bottom:0;transform:rotate(10deg) scaleX(-1)}
+.htree-3{left:20%;bottom:0;font-size:clamp(4rem,9vw,8rem);opacity:0.035}
+.htree-4{right:20%;bottom:0;font-size:clamp(4rem,9vw,8rem);opacity:0.035;transform:scaleX(-1)}
+.split-deco{position:absolute;font-size:clamp(3rem,6vw,5rem);opacity:0.06;pointer-events:none}
+.hero-logo{width:clamp(110px,16vw,155px);height:clamp(110px,16vw,155px);border-radius:18px;object-fit:cover;border:3px solid var(--gold);box-shadow:0 10px 50px rgba(184,134,11,0.3);margin-bottom:26px;position:relative;z-index:1}
+.hero-eyebrow{font-family:"Lato",sans-serif;font-size:0.7rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:700;position:relative;z-index:1}
+h1{font-family:"Cinzel",serif;font-size:clamp(2.5rem,6.5vw,5rem);font-weight:900;line-height:1.05;color:var(--brown);position:relative;z-index:1;text-shadow:0 2px 12px rgba(184,134,11,0.12)}
+h1 em{color:var(--gold);font-style:normal}
+.hero-amp{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.2rem,2.8vw,2rem);color:var(--muted);display:block;margin:4px 0;position:relative;z-index:1}
+.hero-sub{font-family:"Cormorant Garamond",serif;font-size:clamp(1.05rem,2vw,1.45rem);font-style:italic;color:var(--muted);margin:14px auto 34px;max-width:500px;position:relative;z-index:1}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.btn-gold{background:var(--gold);color:var(--white);padding:13px 36px;font-size:0.76rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-family:"Lato",sans-serif;transition:all 0.3s;border-radius:30px;box-shadow:0 4px 20px rgba(184,134,11,0.35)}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-3px);box-shadow:0 8px 30px rgba(184,134,11,0.45)}
+.btn-outline{background:transparent;color:var(--brown);padding:13px 36px;font-size:0.76rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;border:2px solid var(--gold);cursor:pointer;font-family:"Lato",sans-serif;transition:all 0.3s;border-radius:30px}
+.btn-outline:hover{background:var(--gold);color:var(--white);transform:translateY(-3px)}
+.hero-divider{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:34px auto 26px;position:relative;z-index:1}
+.hero-stats{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.stat-num{font-family:"Cinzel",serif;font-size:1.9rem;font-weight:700;color:var(--brown);line-height:1}
+.stat-label{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-top:5px;font-weight:700}
+
+/* === SECTIONS === */
+section{padding:90px 5%;position:relative;overflow:hidden}
+.section-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.section-deco{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.sdeco{position:absolute;opacity:0.045;line-height:1;filter:sepia(0.7)}
+.section-tag{font-family:"Lato",sans-serif;font-size:0.68rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold2);margin-bottom:12px;font-weight:700}
+h2{font-family:"Cinzel",serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.15;color:var(--brown);margin-bottom:12px}
+h2 em{color:var(--gold);font-style:normal}
+.gold-divider{width:55px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold3));margin-bottom:38px}
+
+/* === ABOUT === */
+#about{background:linear-gradient(175deg,var(--white) 0%,#F0E8D0 60%,var(--sandal) 100%);padding-top:100px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.about-text p{color:var(--muted);font-size:0.95rem;line-height:1.9;margin-bottom:15px}
+.about-text p strong{color:var(--brown);font-weight:700}
+.about-badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.badge{background:rgba(184,134,11,0.1);border:1.5px solid var(--border);color:var(--brown);padding:6px 16px;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;font-family:"Lato",sans-serif;border-radius:20px}
+.about-card{background:var(--card);border:1px solid var(--border);border-top:3px solid var(--gold);padding:30px;box-shadow:0 6px 36px rgba(184,134,11,0.12);border-radius:0 0 12px 12px}
+.about-card h3{font-family:"Cinzel",serif;font-size:1rem;color:var(--gold);margin-bottom:16px;font-weight:600}
+.info-row{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:0.84rem}
+.info-row:last-child{border-bottom:none}
+.info-key{color:var(--muted);min-width:95px;font-weight:700;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase}
+.info-val{color:var(--brown);font-weight:400}
+
+/* === PRODUCTS === */
+#products{background:linear-gradient(175deg,var(--sandal) 0%,var(--cream) 50%,var(--white) 100%);padding-top:110px}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;margin-top:10px}
+.product-card{background:var(--card);border:1px solid var(--border);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;border-radius:12px}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(184,134,11,0.2)}
+.product-img-wrap{width:100%;height:195px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--sandal),var(--sandal2))}
+.product-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.product-card:hover .product-img-wrap img{transform:scale(1.07)}
+.product-img-placeholder{width:100%;height:195px;display:flex;align-items:center;justify-content:center;font-size:4.5rem;background:linear-gradient(135deg,var(--sandal),var(--sandal2))}
+.product-body{padding:22px 20px}
+.product-card h3{font-family:"Cormorant Garamond",serif;font-size:1.18rem;font-weight:700;color:var(--brown);margin-bottom:9px;line-height:1.3}
+.product-card p{font-size:0.83rem;color:var(--muted);line-height:1.8}
+.product-tag{display:inline-block;margin-top:11px;font-size:0.67rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold2);font-weight:700;font-family:"Lato",sans-serif}
+.prod-top-bar{height:3px;background:linear-gradient(90deg,var(--gold),var(--gold3))}
+
+/* === CONTACT === */
+#contact{background:linear-gradient(175deg,var(--white) 0%,var(--sandal) 100%);padding-top:110px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.contact-info h3{font-family:"Cinzel",serif;font-size:1.1rem;color:var(--brown);margin-bottom:24px;font-weight:600}
+.contact-item{display:flex;gap:14px;margin-bottom:20px;align-items:flex-start}
+.contact-icon{width:42px;height:42px;background:rgba(184,134,11,0.1);border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.contact-detail{font-size:0.85rem;color:var(--muted);line-height:1.65}
+.contact-detail strong{display:block;color:var(--brown);margin-bottom:2px;font-size:0.73rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700}
+.contact-detail a{color:var(--gold);text-decoration:none;transition:color 0.3s}
+.contact-detail a:hover{color:var(--gold2);text-decoration:underline}
+.contact-form-box{background:var(--card);border:1px solid var(--border);border-top:3px solid var(--gold);padding:34px;box-shadow:0 6px 36px rgba(184,134,11,0.12);border-radius:0 0 12px 12px}
+.contact-form-box h3{font-family:"Cinzel",serif;font-size:1rem;color:var(--gold);margin-bottom:22px;font-weight:600}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:700}
+.form-group input,.form-group textarea{width:100%;background:var(--white);border:1.5px solid var(--border);color:var(--dark);padding:10px 14px;font-size:0.87rem;font-family:"Lato",sans-serif;outline:none;transition:border-color 0.3s;border-radius:6px}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:95px}
+.whatsapp-bar{margin-top:24px;background:#F0FFF4;border:1.5px solid #7CB97C;padding:16px 18px;display:flex;align-items:center;gap:12px;border-radius:10px}
+.whatsapp-bar span{font-size:1.4rem}
+.whatsapp-bar div{flex:1}
+.whatsapp-bar strong{display:block;color:#2D7A2D;font-size:0.83rem;margin-bottom:2px}
+.whatsapp-bar p{color:#5A855A;font-size:0.76rem}
+.btn-whatsapp{background:#25D366;color:#000;padding:9px 18px;font-size:0.73rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:all 0.3s;font-family:"Lato",sans-serif;border-radius:20px}
+.btn-whatsapp:hover{background:#1ebe5a;transform:translateY(-2px)}
+
+/* === FOOTER === */
+footer{background:var(--brown);border-top:2px solid var(--gold);padding:40px 5%;text-align:center;position:relative;overflow:hidden}
+.footer-logo-wrap{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:12px}
+.footer-logo-img{width:50px;height:50px;border-radius:10px;object-fit:cover;border:2px solid var(--gold)}
+.footer-logo-text{font-family:"Cinzel",serif;font-size:1.05rem;color:var(--gold);font-weight:700;text-align:left;line-height:1.3}
+.footer-logo-text span{display:block;font-size:0.62rem;color:var(--sandal2);letter-spacing:0.1em;font-weight:400;font-family:"Lato",sans-serif;text-transform:uppercase}
+.footer-sub{font-size:0.78rem;color:var(--sandal2);margin-bottom:18px}
+.gold-line{width:40px;height:1px;background:var(--gold);margin:0 auto 16px}
+.footer-links{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+.footer-links a{color:var(--sandal);text-decoration:none;font-size:0.74rem;transition:color 0.3s;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;padding:5px 14px;border-radius:20px;border:1px solid transparent}
+.footer-links a:hover{color:var(--gold);border-color:var(--gold)}
+.footer-copy{font-size:0.7rem;color:var(--sandal2);opacity:0.7}
+
+/* === REVEAL ANIM === */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 0.75s ease,transform 0.75s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* === RESPONSIVE === */
+@media(max-width:768px){.about-grid,.contact-grid{grid-template-columns:1fr;gap:34px}section{padding:60px 5%}#about,#products,#contact{padding-top:80px}}
+@media(max-width:500px){.nav-links{display:none}h1{font-size:2.1rem}.hero-logo{width:90px;height:90px}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo-wrap" href="#home">
+    <img class="nav-logo-img" src="images/logo.jpg" alt="Logo"/>
+    <div class="nav-logo-text">MAHDI COCONUTS<span>&amp; Agro Products</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-trees-bg">
+    <div class="htree htree-1">🌴</div>
+    <div class="htree htree-2">🌴</div>
+    <div class="htree htree-3">🌴</div>
+    <div class="htree htree-4">🌴</div>
+    <div class="split-deco" style="top:12%;left:8%;font-size:3rem">🥥</div>
+    <div class="split-deco" style="top:18%;right:10%;font-size:2.5rem">🥥</div>
+    <div class="split-deco" style="bottom:22%;left:15%;font-size:2rem">🥥</div>
+    <div class="split-deco" style="bottom:18%;right:12%;font-size:2.8rem">🥥</div>
+  </div>
+  <img class="hero-logo reveal" src="images/logo.jpg" alt="Mahdi Coconuts Logo"/>
+  <div class="hero-eyebrow reveal">Est. Periyakulam, Theni &mdash; Tamil Nadu</div>
+  <h1 class="reveal">MAHDI<br/><em>COCONUTS</em></h1>
+  <span class="hero-amp reveal">&amp; Agro Products</span>
+  <p class="hero-sub reveal">Premium Coconut Supply from the Heart of South India</p>
+  <div class="hero-btns reveal">
+    <a href="#products" class="btn-gold">Our Products</a>
+    <a href="#contact" class="btn-outline">Get in Touch</a>
+  </div>
+  <div class="hero-divider"></div>
+  <div class="hero-stats reveal">
+    <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Years in Trade</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Product Lines</div></div>
+    <div class="stat"><div class="stat-num">Pan</div><div class="stat-label">India Supply</div></div>
+    <div class="stat"><div class="stat-num">Export</div><div class="stat-label">Middle East Ready</div></div>
+  </div>
+  <div class="curve-bottom"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 Q600,60 1200,0 L1200,60 L0,60 Z" fill="#FDFAF4"/></svg></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-deco">
+    <div class="sdeco" style="font-size:9rem;top:-30px;left:-40px;transform:rotate(-15deg)">🌴</div>
+    <div class="sdeco" style="font-size:7rem;top:-20px;right:-30px;transform:rotate(15deg) scaleX(-1)">🌴</div>
+    <div class="sdeco" style="font-size:5rem;bottom:10%;left:5%">🥥</div>
+    <div class="sdeco" style="font-size:4rem;bottom:15%;right:6%;transform:rotate(30deg)">🥥</div>
+    <div class="sdeco" style="font-size:4rem;top:30%;left:48%">🥥</div>
+  </div>
+  <div class="curve-top"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,60 Q600,0 1200,60 L1200,0 L0,0 Z" fill="#FDFAF4"/></svg></div>
+  <div class="section-inner">
+    <div class="section-tag reveal">&#127796; Who We Are</div>
+    <h2 class="reveal">Trusted in the <em>Coconut Trade</em></h2>
+    <div class="gold-divider reveal"></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p><strong>Mahdi Coconuts &amp; Agro Products</strong> is a GST-registered agro-commodity business based in Periyakulam, Theni District, Tamil Nadu. With over 3 years of experience, we have built a trusted supply chain connecting farmers, traders, factories, and exporters.</p>
+        <p>We maintain large stocks of <strong>fresh green coconuts</strong> and <strong>dry mature coconuts (kasangal)</strong>, ensuring uninterrupted supply with skilled grading, packing, and logistics.</p>
+        <p>From semi-husked coconuts for metro markets to export-grade kasangal for the Middle East — we deliver consistency and quality every time.</p>
+        <div class="about-badges">
+          <span class="badge">GST Registered</span>
+          <span class="badge">South India</span>
+          <span class="badge">North India</span>
+          <span class="badge">Middle East Export</span>
+          <span class="badge">Bulk Supply</span>
+        </div>
+      </div>
+      <div class="about-card reveal">
+        <h3>&#127796; Company Details</h3>
+        <div class="info-row"><span class="info-key">Company</span><span class="info-val">Mahdi Coconuts &amp; Agro Products</span></div>
+        <div class="info-row"><span class="info-key">Owner</span><span class="info-val">Syed Sheik Dhawood</span></div>
+        <div class="info-row"><span class="info-key">GST No.</span><span class="info-val">33QDBPS2619F1ZE</span></div>
+        <div class="info-row"><span class="info-key">Experience</span><span class="info-val">3+ Years</span></div>
+        <div class="info-row"><span class="info-key">Location</span><span class="info-val">Pallivasal Street, Vadagrai, Periyakulam, Theni &ndash; 625601</span></div>
+        <div class="info-row"><span class="info-key">Supply</span><span class="info-val">South India, North India, Middle East</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="curve-bottom"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 Q600,60 1200,0 L1200,60 L0,60 Z" fill="#E8D5B0"/></svg></div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-deco">
+    <div class="sdeco" style="font-size:8rem;bottom:-20px;left:-30px;transform:rotate(-8deg)">🌴</div>
+    <div class="sdeco" style="font-size:8rem;top:-20px;right:-30px;transform:rotate(8deg) scaleX(-1)">🌴</div>
+    <div class="sdeco" style="font-size:5rem;top:20%;left:3%">🥥</div>
+    <div class="sdeco" style="font-size:4rem;top:50%;right:3%;transform:rotate(20deg)">🥥</div>
+    <div class="sdeco" style="font-size:4.5rem;bottom:20%;left:48%">🥥</div>
+  </div>
+  <div class="curve-top"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,60 Q600,0 1200,60 L1200,0 L0,0 Z" fill="#E8D5B0"/></svg></div>
+  <div class="section-inner">
+    <div class="section-tag reveal">&#127796; What We Supply</div>
+    <h2 class="reveal">Our <em>Products</em></h2>
+    <div class="gold-divider reveal"></div>
+    <div class="products-grid">
+
+      <div class="product-card reveal">
+        <div class="prod-top-bar"></div>
+        <div class="product-img-wrap"><img src="images/semi_husked_coconuts.png" alt="Semi-Husked Coconuts" loading="lazy"/></div>
+        <div class="product-body">
+          <h3>Semi-Husked Coconuts</h3>
+          <p>Premium semi-husked coconuts supplied to traders, metro city markets, and coconut powder factories.</p>
+          <span class="product-tag">&#127796; Traders &bull; Markets &bull; Factories</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="prod-top-bar"></div>
+        <div class="product-img-wrap"><img src="images/de_husked_coconuts.png" alt="De-Husked Coconuts" loading="lazy"/></div>
+        <div class="product-body">
+          <h3>De-Husked Coconuts</h3>
+          <p>High-grade de-husked coconuts for copra makers and oil factories with consistent quality and timely supply.</p>
+          <span class="product-tag">&#127796; Copra Makers &bull; Oil Factories</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="prod-top-bar"></div>
+        <div class="product-img-wrap"><img src="images/husked_green_black.png" alt="Husked Coconuts Green and Black" loading="lazy"/></div>
+        <div class="product-body">
+          <h3>Husked Coconuts — Green &amp; Black</h3>
+          <p>Fresh green husked and matured black (kasangal) coconuts available in bulk for all trade requirements.</p>
+          <span class="product-tag">&#127796; Bulk Supply &bull; All Grades</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="prod-top-bar"></div>
+        <div class="product-img-wrap"><img src="images/bombay_quality.png" alt="Bombay Quality Coconuts" loading="lazy"/></div>
+        <div class="product-body">
+          <h3>Bombay Quality Coconuts</h3>
+          <p>Customised barti bag coconuts available in sizes — 80, 90, 100, 120, 150, 175, and 210 coconuts per bag.</p>
+          <span class="product-tag">&#127796; North India &bull; Wholesale</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="prod-top-bar"></div>
+        <div class="product-img-wrap"><img src="images/export_grade_kasangal.png" alt="Export Grade Kasangal" loading="lazy"/></div>
+        <div class="product-body">
+          <h3>Export Grade Kasangal</h3>
+          <p>Matured black (kasangal) coconuts in 25-nos bags of 12.5 kg or 13.5 kg. Supplied to Middle East exporters.</p>
+          <span class="product-tag">&#127796; Exporters &bull; Middle East</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="prod-top-bar"></div>
+        <div class="product-img-wrap"><img src="images/coconut_shell.png" alt="Coconut Shell" loading="lazy"/></div>
+        <div class="product-body">
+          <h3>Coconut Shell</h3>
+          <p>Dry coconut shells sold for activated carbon production, handicrafts, and fuel applications.</p>
+          <span class="product-tag">&#127796; Industrial &bull; Artisanal</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="prod-top-bar"></div>
+        <div class="product-img-wrap"><img src="images/copra.png" alt="Edible and Non-Edible Copra" loading="lazy"/></div>
+        <div class="product-body">
+          <h3>Edible &amp; Non-Edible Copra</h3>
+          <p>Available in Grade A, B, and C — both edible and non-edible varieties for oil mills, food processors, and traders.</p>
+          <span class="product-tag">&#127796; Grade A &bull; B &bull; C</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="prod-top-bar"></div>
+        <div class="product-img-wrap"><img src="images/tree_saplings.png" alt="Coconut Tree Saplings" loading="lazy"/></div>
+        <div class="product-body">
+          <h3>Coconut Tree Saplings</h3>
+          <p>Healthy country variety coconut tree plants sold directly to farmers for agricultural planting.</p>
+          <span class="product-tag">&#127796; Farmers &bull; Agriculture</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="curve-bottom"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 Q600,60 1200,0 L1200,60 L0,60 Z" fill="#FDFAF4"/></svg></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-deco">
+    <div class="sdeco" style="font-size:9rem;top:-30px;right:-40px;transform:rotate(12deg) scaleX(-1)">🌴</div>
+    <div class="sdeco" style="font-size:7rem;bottom:-20px;left:-30px;transform:rotate(-12deg)">🌴</div>
+    <div class="sdeco" style="font-size:4rem;top:25%;right:4%">🥥</div>
+    <div class="sdeco" style="font-size:3.5rem;bottom:25%;left:4%;transform:rotate(15deg)">🥥</div>
+  </div>
+  <div class="curve-top"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,60 Q600,0 1200,60 L1200,0 L0,0 Z" fill="#FDFAF4"/></svg></div>
+  <div class="section-inner">
+    <div class="section-tag reveal">&#127796; Reach Us</div>
+    <h2 class="reveal"><em>Contact</em> Us</h2>
+    <div class="gold-divider reveal"></div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Get in Touch</h3>
+        <div class="contact-item">
+          <div class="contact-icon">&#128205;</div>
+          <div class="contact-detail"><strong>Address</strong>Pallivasal Street, Vadagrai,<br/>Periyakulam, Theni &ndash; 625601<br/>Tamil Nadu, India</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#128222;</div>
+          <div class="contact-detail"><strong>Phone</strong><a href="tel:+917418397197">+91 74183 97197</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#9993;&#65039;</div>
+          <div class="contact-detail"><strong>Email</strong><a href="mailto:mahditraers22@gmail.com">mahditraers22@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#128216;</div>
+          <div class="contact-detail"><strong>Facebook</strong><a href="https://www.facebook.com/share/1DpE8QZ2px/" target="_blank">Visit our Facebook Page</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#127991;&#65039;</div>
+          <div class="contact-detail"><strong>GST Number</strong>33QDBPS2619F1ZE</div>
+        </div>
+        <div class="whatsapp-bar">
+          <span>&#128172;</span>
+          <div><strong>WhatsApp Us</strong><p>Quick enquiries — we respond fast</p></div>
+          <a href="https://wa.me/917418397197?text=Hello%20Mahdi%20Coconuts%2C%20I%20am%20interested%20in%20your%20products." target="_blank" class="btn-whatsapp">Chat Now</a>
+        </div>
+      </div>
+      <div class="contact-form-box reveal">
+        <h3>&#127796; Send an Enquiry</h3>
+        <form action="https://formspree.io/f/xrevowgk" method="POST">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Enter your name" required/>
+          </div>
+          <div class="form-group">
+            <label>Phone / Email</label>
+            <input type="text" name="contact" placeholder="Your phone or email" required/>
+          </div>
+          <div class="form-group">
+            <label>Product Interest</label>
+            <input type="text" name="product" placeholder="e.g. Semi-husked, Export grade..."/>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us your requirement — quantity, location, etc." required></textarea>
+          </div>
+          <button type="submit" class="btn-gold" style="width:100%;border:none;cursor:pointer;border-radius:30px;padding:14px;font-size:0.76rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;font-family:Lato,sans-serif;">Send Enquiry</button>
+        </form>
+        <div id="form-success" style="display:none;margin-top:14px;padding:12px;background:#F0FFF4;border:1px solid #7CB97C;border-radius:8px;color:#2D7A2D;font-size:0.85rem;text-align:center;font-weight:700;">
+          &#10003; Enquiry sent! We will contact you soon.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo-wrap">
+    <img class="footer-logo-img" src="images/logo.jpg" alt="Logo"/>
+    <div class="footer-logo-text">MAHDI COCONUTS &amp; AGRO PRODUCTS<span>Periyakulam, Theni &mdash; Tamil Nadu</span></div>
+  </div>
+  <div class="footer-sub">Pallivasal Street, Vadagrai, Periyakulam, Theni &ndash; 625601 &nbsp;|&nbsp; GST: 33QDBPS2619F1ZE</div>
+  <div class="gold-line"></div>
+  <div class="footer-links">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.facebook.com/share/1DpE8QZ2px/" target="_blank">Facebook</a>
+    <a href="https://wa.me/917418397197" target="_blank">WhatsApp</a>
+  </div>
+  <div class="footer-copy">&copy; 2024 Mahdi Coconuts &amp; Agro Products. All rights reserved.</div>
+</footer>
+
+<script>
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*80); });
+},{threshold:0.08});
+reveals.forEach(el=>obs.observe(el));
+
+// Nav active
+const secs = document.querySelectorAll('section');
+const nls = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id});
+  nls.forEach(a=>{
+    const active = a.getAttribute('href')==='#'+cur;
+    a.style.background = active ? 'var(--gold)' : '';
+    a.style.color = active ? 'var(--white)' : '';
+    a.style.borderColor = active ? 'var(--gold)' : '';
+  });
+});
+
+</script>
+</body>
+</html>
